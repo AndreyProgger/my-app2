@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 
-const repositoryName = 'my-vite-app'
+const repositoryName = 'my-app2'
 
 export default defineConfig({
   plugins: [react()],
