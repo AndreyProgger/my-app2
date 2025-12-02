@@ -92,7 +92,7 @@ function AppContent() {
 
 function App() {
   return (
-    <Router basename="/my-vite-app">
+    <Router basename="/my-app2">
       <AppContent />
     </Router>
   )
