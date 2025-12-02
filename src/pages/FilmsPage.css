@@ -1,0 +1,71 @@
+
+.films-page {
+  padding: 2rem 0;
+}
+
+.films-page h2 {
+  margin-bottom: 2rem;
+  color: #f3eaea;
+  text-align: center;
+}
+
+.films-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  background: transparent; /* Делаем фон прозрачным */
+}
+
+.film-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.film-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.film-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.film-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #141414;
+}
+
+.film-year {
+  background: #141414;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.film-director {
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.film-rating {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.rating-value {
+  color: #ff9800;
+}
+
+.film-description {
+  color: #444;
+  line-height: 1.6;
+}

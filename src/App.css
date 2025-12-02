@@ -1,0 +1,184 @@
+/* Фоновый слой */
+.background-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Отправляем фон на задний план */
+  background-position: center;
+  background-attachment: fixed;
+  pointer-events: none; /* Фон не должен перехватывать события */
+}
+
+/* Фоновые изображения */
+.bg-home {
+  background-image: url('/src/images/mainimage.jpg');
+}
+
+.bg-films {
+  background-image: url('/src/images/imagefilm.jpg');
+}
+
+.bg-converter {
+  background-image: url('/src/images/currency.jpg');
+}
+
+.bg-weather {
+  background-image: url('/src/images/wether.jpg');
+}
+
+/* Основные стили */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Убедимся, что контент над фоном */
+  z-index: 1; /* Контент должен быть выше фона */
+}
+
+nav {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem 0;
+  width: 100%;
+  position: relative; /* Навигация должна быть доступна */
+  z-index: 10; /* Делаем навигацию выше всего */
+}
+
+.nav-list {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-button {
+  background-color: rgba(100, 108, 255, 0.8);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 200px;
+  text-align: center;
+  position: relative; /* Убедимся, что кнопки доступны */
+  z-index: 11; /* Кнопки должны быть выше навигации */
+}
+
+.nav-button:hover {
+  background-color: rgba(100, 108, 255, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.nav-button:active {
+  transform: translateY(0);
+}
+
+.nav-button.active {
+  background-color: rgba(83, 91, 242, 1);
+  box-shadow: 0 0 10px rgba(83, 91, 242, 0.5);
+}
+
+/* Основной контент */
+.main-content {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  color: white;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem 0;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.home-page {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+/* Базовые стили */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #2f5677;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
